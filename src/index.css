@@ -1,0 +1,34 @@
+:root {
+  font-family: 'Avenir Next', 'SF Pro Display', sans-serif;
+  color: #dbe3e7;
+  background: #10171b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  --accent: #55d6a5;
+  --app-bg: #10171b;
+  --terminal-bg: #0b1115;
+  --text: #dbe3e7;
+  --border: #29343d;
+}
+* { box-sizing: border-box; }
+html, body, #root { width: 100%; height: 100%; min-width: 320px; margin: 0; }
+body { overflow: hidden; }
+button, input, select, textarea { font: inherit; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid color-mix(in srgb, var(--accent), transparent 20%); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--accent), transparent 70%); }
+html[data-palette="light"] { --text: #263b47; --border: #d7e0e6; }
+html[data-palette="light"] .sidebar { background: #e6edf1; }
+html[data-palette="light"] .sidebar-brand b, html[data-palette="light"] .hosts-list-header h1, html[data-palette="light"] .page-heading h1, html[data-palette="light"] .inspector-header h2 { color: #273b47; }
+html[data-palette="light"] .sidebar-brand span, html[data-palette="light"] .nav-caption { color: #768995; }
+html[data-palette="light"] .nav-item { color: #546a76; }
+html[data-palette="light"] .nav-item:hover { background: #dce5ea; color: #263b47; }
+html[data-palette="light"] .main-toolbar, html[data-palette="light"] .host-editor, html[data-palette="light"] .form-section, html[data-palette="light"] .inspector-footer { background: #f2f5f7; }
+html[data-palette="light"] .breadcrumb b, html[data-palette="light"] .section-title, html[data-palette="light"] .field-label, html[data-palette="light"] .toggle-row b { color: #415762; }
+html[data-palette="light"] .host-card, html[data-palette="light"] .resource-list, html[data-palette="light"] .settings-card, html[data-palette="light"] .lookup-card { background: #f7f9fa; }
+html[data-palette="light"] .host-card-copy > b, html[data-palette="light"] .resource-row b, html[data-palette="light"] .settings-section-head b { color: #263b47; }
+html[data-palette="light"] .field-label input, html[data-palette="light"] .field-label select, html[data-palette="light"] .field-label textarea, html[data-palette="light"] .key-picker input { background: #fff; color: #263b47; }
+html[data-palette="light"] .inspector-header, html[data-palette="light"] .form-section, html[data-palette="light"] .resource-row, html[data-palette="light"] .settings-line { border-color: #d7e0e6; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }

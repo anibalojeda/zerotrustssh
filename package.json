@@ -1,0 +1,71 @@
+{
+  "name": "zero-trust-ssh-client",
+  "productName": "ZERO Trust SSH Client",
+  "description": "A focused, local-first SSH client for macOS.",
+  "author": "Anibal Ojeda (ICTual)",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -k -s first \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron electron/main.cjs\"",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "package:mac": "npm run build && electron-builder --mac --arm64 --publish never",
+    "package:win": "npm run build && electron-builder --win --x64 --publish never",
+    "start": "electron electron/main.cjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@homebridge/node-pty-prebuilt-multiarch": "^0.15.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "lucide-react": "^1.68.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "build": {
+    "npmRebuild": false,
+    "afterPack": "scripts/set-windows-icon.cjs",
+    "appId": "com.zerotrust.sshclient",
+    "productName": "ZERO Trust SSH Client",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "icon": "build/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.developer-tools"
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "zip"
+      ],
+      "signAndEditExecutable": false
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "electron": "^45.2.2",
+    "electron-builder": "^26.18.0",
+    "oxlint": "^1.89.0",
+    "resedit": "^3.1.0",
+    "sharp": "^0.35.5",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5",
+    "wait-on": "^9.5.1"
+  }
+}
