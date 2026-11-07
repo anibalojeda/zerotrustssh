@@ -4,6 +4,10 @@ A focused, local-first SSH client for macOS and Windows. Inspired by Termius, bu
 
 **Version:** 1.0.0
 
+
+https://github.com/user-attachments/assets/de870121-2b99-48c6-b640-502e5329d57a
+
+
 ---
 
 ## About
