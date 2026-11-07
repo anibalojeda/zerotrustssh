@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="512" height="512" fill="#1a1f2e"/>
+  
+  <!-- Shield body - gradient green -->
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Shield outline -->
+  <path d="M 256 80 L 140 140 L 140 260 Q 140 380 256 420 Q 372 380 372 260 L 372 140 Z" 
+        fill="url(#shieldGrad)" stroke="#10b981" stroke-width="3"/>
+  
+  <!-- Lock icon inside shield -->
+  <g>
+    <!-- Lock body (rectangle) -->
+    <rect x="200" y="260" width="112" height="90" rx="6" fill="none" stroke="white" stroke-width="8"/>
+    
+    <!-- Lock shackle (arc) -->
+    <path d="M 220 260 Q 220 200 256 200 Q 292 200 292 260" 
+          fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Lock keyhole circle -->
+    <circle cx="256" cy="310" r="7" fill="white"/>
+  </g>
+</svg>
