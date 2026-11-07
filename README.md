@@ -356,7 +356,6 @@ To reset all profiles and settings:
 
 ### v1.0.0
 
-- **macOS only for now** — Windows packaging exists but is untested on actual Windows machines
 - **No connection history UI** — Logs menu is a placeholder; no actual connection logging yet
 - **No SFTP support** — File transfer not implemented
 - **No X11 forwarding** — X11 connections not supported
